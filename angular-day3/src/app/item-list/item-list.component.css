@@ -1,0 +1,59 @@
+/* Style for the container div */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Style for the search input */
+  #searchItem {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for the category filter dropdown */
+  #categoryFilter {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for the item list and search results */
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  /* Style for h3 and p elements */
+  h3 {
+    color: #333;
+    font-size: 1.2rem;
+  }
+  
+  p {
+    color: #666;
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  /* Highlight on hover */
+  li:hover {
+    background-color: #f0f0f0;
+  }
+  

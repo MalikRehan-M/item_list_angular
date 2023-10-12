@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Item List</h2>
+  
+    <!-- Search Input -->
+    <label for="searchItem">Search Items:</label>
+    <input
+      id="searchItem"
+      type="text"
+      [(ngModel)]="searchText"
+      (input)="updateSearchResults()"
+      placeholder="Search by name..."
+    />
+  
+    <!-- Category Filter Dropdown -->
+    <label for="categoryFilter">Filter by Category:</label>
+    <select
+      id="categoryFilter"
+      [(ngModel)]="selectedCategory"
+      (change)="updateSearchResults()"
+    >
+      <option value="">All</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Furniture">Furniture</option>
+    </select>
+  
+    <!-- Display Search Results -->
+    <h3>Search Results:</h3>
+    <ul>
+      <li *ngFor="let item of searchResults | async">
+        <div class="item">
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.description }}</p>
+          <p>Price: {{ item.price | currency }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
